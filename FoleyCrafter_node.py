@@ -16,7 +16,13 @@ import soundfile as sf
 import torch
 import torchvision
 from huggingface_hub import snapshot_download, hf_hub_download
-from moviepy.editor import AudioFileClip, VideoFileClip
+try:
+    from moviepy.editor import  VideoFileClip, AudioFileClip
+except:
+    try:
+        from moviepy import VideoFileClip, AudioFileClip
+    except:
+        from moviepy import *
 
 from transformers import CLIPImageProcessor, CLIPVisionModelWithProjection
 from .foleycrafter.models.onset import torch_utils
