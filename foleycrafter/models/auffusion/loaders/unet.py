@@ -25,7 +25,8 @@ from torch import nn
 
 from diffusers.loaders.utils import AttnProcsLayers
 from diffusers.models.embeddings import ImageProjection
-from diffusers.models.modeling_utils import _LOW_CPU_MEM_USAGE_DEFAULT, load_model_dict_into_meta
+from diffusers.models.modeling_utils import _LOW_CPU_MEM_USAGE_DEFAULT
+from diffusers.models.model_loading_utils import load_model_dict_into_meta
 from diffusers.utils import (
     USE_PEFT_BACKEND,
     _get_model_file,
