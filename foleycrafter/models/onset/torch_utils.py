@@ -16,7 +16,7 @@ def load_model(cp_path, net, device=None, strict=True):
         device = torch.device("cpu")
     if os.path.isfile(cp_path):
         print("=> loading checkpoint '{}'".format(cp_path))
-        checkpoint = torch.load(cp_path, map_location=device)
+        checkpoint = torch.load(cp_path, map_location=device, weights_only=False)
 
         # check if there is module
         if list(checkpoint["state_dict"].keys())[0][:7] == "module.":
