@@ -14,3 +14,4 @@ pydub
 scipy
 accelerate
 pert
+torchcodec
